@@ -8,3 +8,7 @@ export const formatDate = (date: Date) => {
 
     return `${fixZero(day)}/${fixZero(month)}/${fixZero(year)}`;
 }
+
+export const formatPrice = (number: number) => {
+    return number.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
+}
