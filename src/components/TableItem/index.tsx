@@ -1,5 +1,5 @@
 import './styles.scss';
-import { formatDate } from '../../helpers/dateFilter';
+import { formatDate, formatPrice } from '../../helpers/dateFilter';
 import { Item } from '../../types/Item';
 import { categories } from '../../data/categories';
 
@@ -17,7 +17,11 @@ export const TableItem = ({ item }: Props) => {
                 </div>
             </td>
             <td>{item.title}</td>
-            <td>R${item.value}</td>
+            <td>
+                <div style={{color: categories[item.category].expense ? '#F00' : '#0F0'}}>
+                    {formatPrice(item.value)}
+                </div>
+            </td>
         </tr>
     )
 }
