@@ -1,4 +1,7 @@
-import './App.styles.scss'
+import './App.styles.scss';
+import { TableArea } from './components/TableArea';
+
+
 const App = () => {
   return (
     <div className="container">
@@ -7,11 +10,11 @@ const App = () => {
       </header>
       <main className="body">
 
-        {/* área de informações */}
+        {/* <InfoArea /> */}
 
         {/* área de inserção */}
 
-        {/* Tabela de itens */}
+        <TableArea />
       </main>
     </div>
   )
