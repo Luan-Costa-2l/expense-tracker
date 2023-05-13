@@ -2,4 +2,21 @@
     td {
         padding: 10px 0;
     }
+
+    .category {
+        display: inline-block;
+       padding: 5px 10px;
+       border-radius: 5px;
+       color: #FFF;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+    .brown {
+        background-color: brown;
+    }
+    .green {
+        background-color: green;
+    }
 }
