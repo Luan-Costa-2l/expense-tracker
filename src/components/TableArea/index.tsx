@@ -1,6 +1,12 @@
 import './styles.scss';
+import { Item } from '../../types/Item';
+import { TableItem } from '../TableItem';
 
-export const TableArea = () => {
+type Props = {
+    list: Item[];
+}
+
+export const TableArea = ({ list }: Props) => {
     return (
         <table className='tableContainer'>
             <thead>
