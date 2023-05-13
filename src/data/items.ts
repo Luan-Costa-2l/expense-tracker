@@ -1,4 +1,4 @@
-import { Item } from "../types/item";
+import { Item } from "../types/Item";
 
 export const item: Item[] = [
     {date: new Date(2023, 3, 10), category: 'food', title: 'McDonalds', value: 23.45},
