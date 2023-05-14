@@ -1,10 +1,7 @@
+@use '../../global';
+
 .tableContainer {
-    width: 100%;
-    padding: 20px;
-    background-color: #FFF;
-    box-shadow: 0px 0px 5px #CCC;
-    border-radius: 10px;
-    margin-top: 20px;
+    @extend %default-box;
 
     th {
         padding: 10px 0;
