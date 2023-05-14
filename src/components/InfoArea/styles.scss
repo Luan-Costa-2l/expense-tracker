@@ -1,0 +1,33 @@
+@use '../../global';
+
+.infoBody {
+    @extend %default-box;
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+
+    .monthArea {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .monthArrow {
+        font-size: 25px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .resumeArea {
+        flex: 2;
+        display: flex;
+        justify-content: space-around;
+        font-weight: bold;
+    }
+
+    .resumeTitle {
+        color: #888;
+        margin-bottom: 8px;
+    }
+}
