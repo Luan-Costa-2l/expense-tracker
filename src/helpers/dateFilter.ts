@@ -1,6 +1,21 @@
+import { Item } from "../types/Item";
+
 export const getCurrentMonth = () => {
     const now = new Date();
     return `${now.getFullYear()}-${now.getMonth()}`;
+}
+
+export const filterListByMonth = (list: Item[], date: string) => {
+    let newList: Item[] = [];
+    const [year, month] = date.split('-');
+    for (let item of list) {
+        const iYear = item.date.getFullYear();
+        const iMonth = item.date.getMonth();
+        if (+year === iYear && +month === iMonth) {
+            newList.push(item);
+        }
+    }
+    return newList;
 }
 
 const fixZero = (number: number) => {
