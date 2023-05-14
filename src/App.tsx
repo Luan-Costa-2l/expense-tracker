@@ -23,7 +23,7 @@ const App = () => {
       </header>
       <main className="body">
 
-        <InfoArea />
+        <InfoArea currentMonth={currentMonth} />
 
         {/* área de inserção */}
 

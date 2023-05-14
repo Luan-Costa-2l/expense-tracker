@@ -1,11 +1,16 @@
+import { formatCurrentMonth } from '../../helpers/dateFilter';
 import './styles.scss';
 
-export const InfoArea = () => {
+type Props = {
+    currentMonth: string;
+}
+
+export const InfoArea = ({ currentMonth }: Props) => {
     return (
         <div className="infoBody">
             <div className="monthArea">
                 <div className="monthArrow">⬅️</div>
-                <div className="monthItem">Março</div>
+                <div className="monthItem">{formatCurrentMonth(currentMonth)}</div>
                 <div className="monthArrow">➡️</div>
             </div>
             <div className="resumeArea">
