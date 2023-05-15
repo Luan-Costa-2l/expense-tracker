@@ -18,7 +18,7 @@ export const InfoArea = ({ currentMonth, onMonthChange }: Props) => {
     const handlePrevMonth = () => {
         let [year, month] = currentMonth.split('-');
         const currentDate = new Date(parseInt(year), parseInt(month), 1);
-        currentDate.setMonth( currentDate.getMonth() + 1);
+        currentDate.setMonth( currentDate.getMonth() - 1);
         onMonthChange(`${currentDate.getFullYear()}-${currentDate.getMonth()}`);
     }
 
