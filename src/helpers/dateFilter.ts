@@ -7,8 +7,8 @@ export const getCurrentMonth = () => {
 
 export const formatCurrentMonth = (currentMonth: string) => {
     const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-    const monthNumber = currentMonth.split('-')[1];
-    return months[parseInt(monthNumber)];
+    const date = currentMonth.split('-');
+    return `${months[parseInt(date[1])]} de ${date[0]}`;
 }
 
 export const filterListByMonth = (list: Item[], date: string) => {
