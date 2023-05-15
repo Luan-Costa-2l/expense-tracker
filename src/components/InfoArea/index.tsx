@@ -1,4 +1,5 @@
 import { formatCurrentMonth, formatPrice } from '../../helpers/dateFilter';
+import { ResumeItem } from '../ResumeItem';
 import './styles.scss';
 
 type Props = {
@@ -41,18 +42,9 @@ export const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props
                 <div className="monthArrow" onClick={handleNextMonth}>➡️</div>
             </div>
             <div className="resumeArea">
-                <div className="resumeItem">
-                    <div className="resumeTitle">Receita</div>
-                    <div className="resumeValue">{formatPrice(income)}</div>
-                </div>
-                <div className="resumeItem">
-                    <div className="resumeTitle">Despesa</div>
-                    <div className="resumeValue">{formatPrice(expense)}</div>
-                </div>
-                <div className="resumeItem">
-                    <div className="resumeTitle">Balanço</div>
-                    <div className="resumeValue" style={{color: expenseBalance()}}>{formatPrice(income - expense)}</div>
-                </div>
+                <ResumeItem title='Receita' value={income} />
+                <ResumeItem title='Despesa' value={expense} />
+                <ResumeItem title='Balanço' value={income - expense} color={expenseBalance()} />
             </div>
         </div>
     )
