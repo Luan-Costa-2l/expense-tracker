@@ -17,7 +17,7 @@ const App = () => {
   const [expense, setExpense] = useState(0);
 
   useEffect(() => {
-    setFilteredList( filterListByMonth(item, currentMonth) );
+    setFilteredList( filterListByMonth(list, currentMonth) );
   }, [list, currentMonth]);
 
   useEffect(() => {
