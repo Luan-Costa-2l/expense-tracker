@@ -38,6 +38,12 @@ const App = () => {
     setCurrentMonth(newMonth);
   }
 
+  const handleAddItem = (item: Item) => {
+    let newList = [...list];
+    newList.push(item);
+    setList(newList);
+  }
+
   return (
     <div className="container">
       <header className="header">
@@ -47,7 +53,7 @@ const App = () => {
 
         <InfoArea currentMonth={currentMonth} onMonthChange={handleMonthChange} income={income} expense={expense} />
 
-        <InputArea />
+        <InputArea addItem={handleAddItem} />
 
         <TableArea list={filteredList} />
       </main>
