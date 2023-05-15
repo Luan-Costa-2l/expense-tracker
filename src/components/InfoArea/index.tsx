@@ -1,4 +1,4 @@
-import { formatCurrentMonth, formatPrice } from '../../helpers/dateFilter';
+import { formatCurrentMonth } from '../../helpers/dateFilter';
 import { ResumeItem } from '../ResumeItem';
 import './styles.scss';
 
