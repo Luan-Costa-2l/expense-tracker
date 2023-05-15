@@ -16,6 +16,10 @@ const App = () => {
     setFilteredList( filterListByMonth(item, currentMonth) );
   }, [list, currentMonth]);
 
+  const handleMonthChange = (newMonth: string) => {
+    setCurrentMonth(newMonth);
+  }
+
   return (
     <div className="container">
       <header className="header">
@@ -23,7 +27,7 @@ const App = () => {
       </header>
       <main className="body">
 
-        <InfoArea currentMonth={currentMonth} />
+        <InfoArea currentMonth={currentMonth} onMonthChange={handleMonthChange} />
 
         {/* área de inserção */}
 
