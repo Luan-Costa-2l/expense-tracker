@@ -11,7 +11,9 @@ export const InputArea = () => {
                 <div className="inputTitle">Categoria</div>
                 <select>
                     <option value=""></option>
-                    <option value="">exemple</option>
+                    {categoriesKeys.map((item, index) => (
+                        <option key={index} value={item}>{item}</option>
+                    ))}
                 </select>
             </div>
             <div className="inputItem">
