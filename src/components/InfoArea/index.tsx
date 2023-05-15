@@ -24,6 +24,15 @@ export const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props
         onMonthChange(`${currentDate.getFullYear()}-${currentDate.getMonth()}`);
     }
 
+    const expenseBalance = () => {
+        if (income == expense) {
+            return '#000';
+        } else if (income < expense) {
+            return '#F00';
+        }
+        return '#0F0';
+    }
+
     return (
         <div className="infoBody">
             <div className="monthArea">
@@ -42,7 +51,7 @@ export const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props
                 </div>
                 <div className="resumeItem">
                     <div className="resumeTitle">Balanço</div>
-                    <div className="resumeValue">{formatPrice(income - expense)}</div>
+                    <div className="resumeValue" style={{color: expenseBalance()}}>{formatPrice(income - expense)}</div>
                 </div>
             </div>
         </div>
