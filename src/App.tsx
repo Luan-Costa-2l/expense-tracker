@@ -44,7 +44,7 @@ const App = () => {
       </header>
       <main className="body">
 
-        <InfoArea currentMonth={currentMonth} onMonthChange={handleMonthChange} />
+        <InfoArea currentMonth={currentMonth} onMonthChange={handleMonthChange} income={income} expense={expense} />
 
         {/* área de inserção */}
 

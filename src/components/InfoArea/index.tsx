@@ -1,12 +1,14 @@
-import { formatCurrentMonth } from '../../helpers/dateFilter';
+import { formatCurrentMonth, formatPrice } from '../../helpers/dateFilter';
 import './styles.scss';
 
 type Props = {
     currentMonth: string;
     onMonthChange: (newMonth: string) => void;
+    income: number;
+    expense: number;
 }
 
-export const InfoArea = ({ currentMonth, onMonthChange }: Props) => {
+export const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props) => {
 
     const handleNextMonth = () => {
         let [year, month] = currentMonth.split('-');
@@ -32,15 +34,15 @@ export const InfoArea = ({ currentMonth, onMonthChange }: Props) => {
             <div className="resumeArea">
                 <div className="resumeItem">
                     <div className="resumeTitle">Receita</div>
-                    <div className="resumeValue">R$0.00</div>
+                    <div className="resumeValue">{formatPrice(income)}</div>
                 </div>
                 <div className="resumeItem">
                     <div className="resumeTitle">Despesa</div>
-                    <div className="resumeValue">R$700.00</div>
+                    <div className="resumeValue">{formatPrice(expense)}</div>
                 </div>
                 <div className="resumeItem">
                     <div className="resumeTitle">Balanço</div>
-                    <div className="resumeValue">R$900.00</div>
+                    <div className="resumeValue">{formatPrice(income - expense)}</div>
                 </div>
             </div>
         </div>
