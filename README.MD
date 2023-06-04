@@ -1,6 +1,6 @@
 # Expense Tacker
 <img src="./public/logo.png" />
-<p>Send messages to your friends and have fun😃!</p>
+<p>Take care of your finances💰!</p>
 
 ## Indice
 - [preview](#😁-preview)
@@ -16,6 +16,9 @@
 ## 📃 About
 
 **expense-tacker**  was created so that users can monitor their monthly expenses, classifying them as Income or Expense. If you owe money, at the end of the month the value turns red to alert the user
+
+## Features
+- [x] Registration of expenses
 
 ## 🔨 Tools
 - [React](https://legacy.reactjs.org/)
@@ -44,3 +47,8 @@
     # Run the project
     $ npm run dev
 ```
+
+## Next Steps
+
+- [ ] Login
+- [ ] Salve user data in the backend
